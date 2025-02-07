@@ -4,103 +4,37 @@ import Telegram from "/public/icons/telegram.svg";
 import Whatsapp from "/public/icons/whatsapp.svg";
 import Facebook from "/public/icons/facebook.svg";
 import V1_logo_white from "/public/icons/logo-white.svg";
+import { footerLinks } from "@/data/footerinfo";
 ---
 
 <footer class="bg-brand-900 text-white py-11">
   <div class="container mx-auto flex flex-col gap-14 px-4 md:px-8">
-    <div
-      class="grid grid-cols-1 gap-4 sm:px-6 lg:grid-cols-2 lg:px-0 md:grid-cols-2"
-    >
+    <div class="grid grid-cols-1 gap-4 sm:px-6 lg:grid-cols-2 lg:px-0 md:grid-cols-2">
       <div class="flex flex-col gap-4 md:w-3/5">
-        <Image src={V1_logo_white} class="w-50 h-50 mr-2" alt="Facebook" />
+        <Image src={V1_logo_white} alt="Logo" class="w-32" />
         <p class="text-base-medium text-gray-300 md:text-balance">
-          Explora los mejores paquetes de viaje y experiencias adaptadas a tus
-          preferencias. Permítenos ayudarte a planear las vacaciones de tus
-          sueños.
+          Explora los mejores paquetes de viaje y experiencias adaptadas a tus preferencias. 
+          Permítenos ayudarte a planear las vacaciones de tus sueños.
         </p>
       </div>
 
-      {/* Mapeo de secciones del footer */}
+      <!-- Secciones del footer -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-9">
-        <div class="min-w-52 px-3">
-          <h3 class="text-sm-normal-footer">Atención al cliente</h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="/contacto" class="text-sm-medium flex items-center"
-                ><span class="text-textColor-gray">Contáctanos</span></a
-              >
-            </li>
-            <li>
-              <a href="/privacidad" class="text-sm-medium flex items-center"
-                ><span class="text-textColor-gray">Aviso de privacidad</span></a
-              >
-            </li>
-            <li>
-              <a href="/terminos" class="text-sm-medium flex items-center"
-                ><span class="text-textColor-gray">Términos y condiciones</span
-                ></a
-              >
-            </li>
-            <li>
-              <a href="/cookies" class="text-sm-medium flex items-center"
-                ><span class="text-textColor-gray">Política de cookies</span></a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="min-w-52 px-3">
-          <h3 class="text-sm-normal-footer">Sobre nosotros</h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="/quienes-somos" class="text-sm-medium flex items-center"
-                ><span class="text-textColor-gray">Quiénes somos</span></a
-              >
-            </li>
-            <li>
-              <a href="/afiliados" class="text-sm-medium flex items-center"
-                ><span class="text-textColor-gray">Programa de afiliados</span
-                ></a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="min-w-52 px-3">
-          <h3 class="text-sm-normal-footer">Síguenos</h3>
-          <ul class="space-y-2">
-            <li>
-              <a
-                href="https://facebook.com"
-                class="text-sm-medium flex items-center hover:cursor-pointer"
-              >
-                <Image src={Facebook} class="w-5 h-5 mr-2" alt="Facebook" />
-
-                <span class="text-textColor-gray">Facebook</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://whatsapp.com"
-                class="text-sm-medium flex items-center hover:cursor-pointer"
-              >
-                <Image src={Whatsapp} class="w-5 h-5 mr-2" alt="Whatsapp" />
-
-                <span class="text-textColor-gray">Whatsapp</span></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://telegram.org"
-                class="text-sm-medium flex items-center hover:cursor-pointer"
-              >
-                <Image src={Telegram} class="w-5 h-5 mr-2" alt="Telegram" />
-
-                <span class="text-textColor-gray">Telegram</span></a
-              >
-            </li>
-          </ul>
-        </div>
+        {footerLinks.map((section) => (
+          <div class="min-w-52 px-3"> <!-- 🔹 Eliminado key -->
+            <h3 class="text-sm-normal-footer">{section.title}</h3>
+            <ul class="space-y-2">
+              {section.links.map(({ text, href, icon }) => (
+                <li>
+                  <a href={href} class={`text-sm-medium flex items-center ${icon ? "hover:cursor-pointer" : ""}`}>
+                    {icon && <img src="icons/facebook.svg" alt={text} class="w-5 h-5 mr-2" />} 
+                    <span class="text-textColor-gray">{text}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
 

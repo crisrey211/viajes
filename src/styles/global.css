@@ -175,3 +175,44 @@
   width: 100%;
   height: 100%;
 }
+@layer utilities {
+  .text-highlight {
+    @apply text-blue-500 font-bold underline;
+  }
+  .text-xs-normal{
+    @apply font-normal size-5 text-xs leading-7 mb-4 h-7 w-52 text-center;
+  }
+  .text-sm-normal{
+    @apply font-bold size-5 text-xl leading-7 mb-4 h-7 w-52 text-textColor-mutedForeground;
+  }
+  .text-sm-normal-footer{
+    @apply font-bold size-5 text-xl leading-7 mb-4 h-7 w-52 text-white;
+  }
+  .text-sm-medium{
+    @apply text-sm text-textColor-gray hover:cursor-pointer;
+  }
+  .text-sm-semibold{
+    @apply text-sm text-brand-900 leading-5 font-semibold hover:cursor-pointer;
+  }
+  .text-base-medium{
+    @apply text-base leading-6 ;
+  }
+  .text-lg-normal{
+    @apply font-normal text-lg leading-7 text-textColor-mutedForeground;
+  }
+  .text-xl-medium{
+    @apply text-xl leading-7 font-medium text-textColor-mutedForeground
+  }
+  .text-xl-bold{
+    @apply  text-white
+  }
+  .text-4xl-bold{
+    @apply font-bold text-4xl leading-10 
+  }
+  .text-5x-bold{
+    @apply font-bold text-5xl leading-10 text-textColor-foreground
+  }
+  .text-6xl-bold{
+    @apply font-bold text-6xl leading-[60px] text-white  
+  }
+}

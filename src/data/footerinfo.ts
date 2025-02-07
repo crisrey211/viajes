@@ -1,6 +1,8 @@
-import Facebook from "@/icons/Facebook"
-import Telegram from "@/icons/Telegram"
-import Whatsapp from "@/icons/Whatsapp"
+// Importamos los iconos como strings
+const FacebookIcon = "/icons/facebook.svg";
+const WhatsappIcon = "/icons/whatsapp.svg";
+const TelegramIcon = "/icons/telegram.svg";
+import { Briefcase } from "lucide-react";
 
 interface Link {
   text: string;
@@ -33,9 +35,9 @@ export const footerLinks: FooterLinkProps[] = [
   {
     title: "Síguenos",
     links: [
-      { text: "Facebook", href: "https://facebook.com", icon: Facebook },
-      { text: "Whatsapp", href: "https://whatsapp.com", icon: Whatsapp },
-      { text: "Telegram", href: "https://telegram.org", icon: Telegram },
+      { text: "Facebook", href: "https://facebook.com", icon: Briefcase },
+      { text: "Whatsapp", href: "https://whatsapp.com", icon: Briefcase },
+      { text: "Telegram", href: "https://telegram.org", icon: Briefcase },
     ],
   },
 ];
