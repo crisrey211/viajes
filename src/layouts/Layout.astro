@@ -2,6 +2,7 @@
 import { Download } from "lucide-react";
 import { Sidebar } from "@/components/Sidebar";
 import ThemeInit from "@/components/ThemeInit.astro";
+import "@fontsource-variable/inter";
 import "../styles/global.css";
 
 interface Props {
@@ -26,12 +27,15 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
 
-<ThemeInit />
+    <ThemeInit />
   </head>
 
   <body class="min-h-screen bg-background font-sans antialiased touch-none">
     <div class="flex h-screen optimize-gpu overflow-auto">
-      <div id="left-sidebar" class="w-[64px] shrink-0 border-r mobile:fixed mobile:z-50 mobile:transition-transform mobile:duration-300 mobile:translate-x-[-64px] mobile:data-[open=true]:translate-x-0">
+      <div
+        id="left-sidebar"
+        class="w-[64px] shrink-0 border-r mobile:fixed mobile:z-50 mobile:transition-transform mobile:duration-300 mobile:translate-x-[-64px] mobile:data-[open=true]:translate-x-0"
+      >
         <Sidebar client:load />
       </div>
 
@@ -44,7 +48,10 @@ const {
             <img src="/logo-dark.png" alt="Logo" class="h-10 dark:hidden" />
             <img src="/logo.svg" alt="Logo" class="h-10 hidden dark:block" />
           </div>
-          <a href="/install" class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg">
+          <a
+            href="/install"
+            class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg"
+          >
             <Download className="h-4 w-4" />
             Install
           </a>
@@ -62,6 +69,5 @@ const {
         </footer>
       </div>
     </div>
-
   </body>
 </html>

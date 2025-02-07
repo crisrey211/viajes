@@ -30,6 +30,23 @@ export default {
                 sm: 'calc(var(--radius) - 4px)'
             },
             colors: {
+                brand: {
+    				'50': '#FEF4F2',
+    				'100': '#FDE7E3',
+    				'200': '#FDD4CB',
+    				'300': '#FAB5A7',
+    				'400': '#F58A74',
+    				'500': '#EB6448',
+    				'600': '#CF4326',
+    				'700': '#B53A20',
+    				'800': '#96331E',
+    				'900': '#004150'
+                },
+                textColor: {
+    				gray: '#D1D5DB',
+    				foreground: '#001B27',
+    				mutedForeground: '#52656E'
+    			},
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
                 card: {

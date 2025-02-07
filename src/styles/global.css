@@ -101,6 +101,7 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: "Inter Variable", sans-serif;
   }
   body {
     @apply bg-background text-foreground;
