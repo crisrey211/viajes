@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Alert from "@sections/Alert.astro";
 import Footer from "@sections/Footer.astro";
 import { Chart } from "../components/Chart";
+import Banner from "@/sections/Banner.astro";
+import Socialnetwork from "@/components/Socialnetwork";
 ---
 
 <Layout title="Astro + shadcn/ui">
@@ -40,5 +42,7 @@ import { Chart } from "../components/Chart";
   <section class="space-y-6 py-8 md:py-12 lg:py-24">
     <Chart client:load />
   </section>
+  <Banner />
+  <Socialnetwork client:load />
   <Footer />
 </Layout>

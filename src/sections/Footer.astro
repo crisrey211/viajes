@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import Telegram from "/public/icons/telegram.svg";
-import Whatsapp from "/public/icons/whatsapp.svg";
-import Facebook from "/public/icons/facebook.svg";
-import V1_logo_white from "/public/icons/logo-white.svg";
+import Telegram from "@/icons/telegram.svg";
+import Whatsapp from "@/icons/whatsapp.svg";
+import Facebook from "@/icons/facebook.svg";
+import V1_logo_white from "@/icons/logo-white.svg";
 import { footerLinks } from "@/data/footerinfo";
 ---
 
@@ -35,7 +35,7 @@ import { footerLinks } from "@/data/footerinfo";
                     >
                       {icon && (
                         <img
-                          src="icons/facebook.svg"
+                          src={Telegram.src}
                           alt={text}
                           class="w-5 h-5 mr-2"
                         />

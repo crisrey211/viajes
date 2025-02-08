@@ -12,6 +12,8 @@
       "@stores/*": ["src/stores/*"],
       "@content/*": ["src/content/*"],
       "@data/*": ["src/data/*"],
+      "@assets": ["src/assets"],
+      "@icons": ["src/icons"],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react",

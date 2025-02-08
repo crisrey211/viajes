@@ -1,7 +1,3 @@
-// Importamos los iconos como strings
-const FacebookIcon = "/icons/facebook.svg";
-const WhatsappIcon = "/icons/whatsapp.svg";
-const TelegramIcon = "/icons/telegram.svg";
 import { Briefcase } from "lucide-react";
 
 interface Link {
