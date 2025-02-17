@@ -216,3 +216,12 @@
     @apply font-bold text-6xl leading-[60px] text-white  
   }
 }
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
